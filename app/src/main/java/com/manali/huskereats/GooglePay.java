@@ -6,6 +6,7 @@ import org.json.JSONObject;
 
 /**
  * Google Pay API request configurations
+ * Used the API documentation to write the code for this class
  *
  */
 public class GooglePay {
