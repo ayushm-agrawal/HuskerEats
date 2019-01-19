@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
@@ -21,12 +20,10 @@ import java.util.Objects;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
     //Create variables for getting the data entered
-
     private FirebaseAuth mAuth;
     private EditText mEmail;
     private EditText mPassword;
     private Button mVerify;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +36,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         mAuth = FirebaseAuth.getInstance();
 
         mVerify.setOnClickListener(this);
-
-
     }
     private void registerUser(){
         //get email and password from input
@@ -71,7 +66,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             mPassword.requestFocus();
             return;
         }
-
 
         //create user with email and password
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

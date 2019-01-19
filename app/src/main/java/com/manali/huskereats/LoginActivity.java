@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -24,9 +23,6 @@ import java.util.Objects;
 public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +64,6 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-
                 //Authenticate Email and Password
                 mAuth.signInWithEmailAndPassword(emailText, passwordText)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -90,8 +85,6 @@ public class LoginActivity extends AppCompatActivity {
                         });
             }
         });
-
-
 
         goToSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
