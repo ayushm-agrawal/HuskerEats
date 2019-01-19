@@ -1,5 +1,6 @@
 package com.manali.huskereats;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -23,10 +25,15 @@ public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mAuth = FirebaseAuth.getInstance();
 
         //declare and initialize variables
         final TextView goToSignUp = findViewById(R.id.gotoSignUp);
@@ -61,8 +68,8 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
+
                 //Authenticate Email and Password
-                mAuth = FirebaseAuth.getInstance();
                 mAuth.signInWithEmailAndPassword(emailText, passwordText)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
@@ -83,6 +90,8 @@ public class LoginActivity extends AppCompatActivity {
                         });
             }
         });
+
+
 
         goToSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
