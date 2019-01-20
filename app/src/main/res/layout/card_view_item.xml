@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:layout_margin="12dp"
+    android:id="@+id/card_view_home_page"
     android:clickable="true"
     cardview:cardElevation="2dp"
     android:foreground="?android:attr/selectableItemBackground"

@@ -13,6 +13,10 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="name_hint">Name</string>
+    <string name="phone_number_hint">xxx-xxx-xxxx</string>
+    <string name="email_hint">name@example.com</string>
+    <string name="next_hint">Next</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="or">OR</string>
@@ -30,4 +34,6 @@
     <string name="title_activity_role">RoleActivity</string>
     <string name="title_activity_subscription">SubscriptionActivity</string>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
