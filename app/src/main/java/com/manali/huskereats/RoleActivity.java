@@ -18,7 +18,7 @@ public class RoleActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseDatabase mDatabase;
     private DatabaseReference mRef;
-    private  boolean subscription;
+    private boolean subscription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
