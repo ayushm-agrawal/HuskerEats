@@ -16,12 +16,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <ImageView
+                android:id="@+id/userAvatar"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="190dp"
                 android:layout_height="171dp"
-                android:src="@drawable/defaultUser"
+                android:src="@drawable/default_user"
                 android:layout_marginTop="35dp"/>
             <EditText
+                android:id="@+id/userName"
                 android:layout_width="190dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_horizontal"
@@ -31,6 +33,7 @@
                 android:textAlignment="center"
                 android:textColorHint="@color/colorLightBlack"/>
             <EditText
+                android:id="@+id/userPhoneNumber"
                 android:layout_width="190dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_horizontal"
@@ -39,17 +42,9 @@
                 android:hint="@string/phone_number_hint"
                 android:textAlignment="center"
                 android:textColorHint="@color/colorLightBlack"/>
-            <EditText
-                android:layout_width="190dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="35dp"
-                android:background="@color/colorLightGrey"
-                android:hint="@string/email_hint"
-                android:textAlignment="center"
-                android:textColorHint="@color/colorLightBlack"/>
             <Button
-                android:layout_marginTop="55dp"
+                android:id="@+id/btnNext"
+                android:layout_marginTop="70dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
