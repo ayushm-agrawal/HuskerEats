@@ -145,6 +145,8 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_profile) {
+            Intent profileIntent = new Intent(this, ProfileActivity.class);
+            startActivity(profileIntent);
         } else if (id == R.id.nav_settings) {
 
         } else if (id == R.id.nav_logout) {

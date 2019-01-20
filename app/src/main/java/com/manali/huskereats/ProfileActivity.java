@@ -41,21 +41,25 @@ public class ProfileActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance();
         ref = mDatabase.getReference();
         user = mAuth.getCurrentUser();
+        assert user != null;
         userKey = user.getUid();
 
         //go through user to populate the profile
         ref.child("Users").child(userKey).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                //get name
                mName.setText(dataSnapshot.child("name").getValue(String.class));
+               //get phone number
                mPhoneNumber.setText(dataSnapshot.child("phoneNumber").getValue(String.class));
+               //depending on role get more profile information
                if (dataSnapshot.child("deliver").getValue(boolean.class) && dataSnapshot.child("order").getValue(boolean.class)){
                    mRole.setText("Both");
-                   mCredits.setText(dataSnapshot.child("credits").getValue(String.class));
+                   mCredits.setText((dataSnapshot.child("credits").getValue(long.class)).toString());
                    mCredits.setVisibility(View.VISIBLE);
                }else if (dataSnapshot.child("deliver").getValue(boolean.class) && !dataSnapshot.child("order").getValue(boolean.class)){
                    mRole.setText("Deliver");
-                   mCredits.setText(dataSnapshot.child("credits").getValue(String.class));
+                   mCredits.setText((dataSnapshot.child("credits").getValue(long.class)).toString());
                    mCredits.setVisibility(View.VISIBLE);
                }else if (!dataSnapshot.child("deliver").getValue(boolean.class) && dataSnapshot.child("order").getValue(boolean.class)) {
                    mRole.setText("Order");

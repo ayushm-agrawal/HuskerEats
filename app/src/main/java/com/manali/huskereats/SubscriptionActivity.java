@@ -1,5 +1,6 @@
 package com.manali.huskereats;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -15,9 +16,9 @@ public class SubscriptionActivity extends AppCompatActivity {
         subscribe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent homeIntent = new Intent(SubscriptionActivity.this, HomeActivity.class);
-//                homeIntent.putExtra("subscribed", true);
-//                startActivity(homeIntent);
+                Intent homeIntent = new Intent(SubscriptionActivity.this, HomeActivity.class);
+                homeIntent.putExtra("subscribed", true);
+                startActivity(homeIntent);
             }
         });
     }
