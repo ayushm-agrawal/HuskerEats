@@ -1,5 +1,6 @@
 package com.manali.huskereats;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.design.widget.Snackbar;
@@ -17,6 +18,8 @@ public class RoleActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseDatabase mDatabase;
     private DatabaseReference mRef;
+    private boolean subscription;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,50 @@ public class RoleActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance();
         // Database reference to users
         mRef = mDatabase.getReference().child("Users");
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get user id
+                String userId = mAuth.getCurrentUser().getUid();
+                // Get current user database reference
+                DatabaseReference currentUserDb = mRef.child(userId);
+
+                // If a user wants to order and deliver
+                if (deliverCheckBox.isChecked() && orderCheckBox.isChecked()){
+                    currentUserDb.child("deliver").setValue(true);
+                    currentUserDb.child("order").setValue(true);
+                    currentUserDb.child("credits").setValue(0);
+                    subscription = true;
+                }
+                // If the user wants to just deliver
+                else if(deliverCheckBox.isChecked() && !orderCheckBox.isChecked()) {
+                    currentUserDb.child("deliver").setValue(true);
+                    currentUserDb.child("order").setValue(false);
+                    currentUserDb.child("credits").setValue(0);
+                    subscription = false;
+                }
+                // If the user just wants to order
+                else if(!deliverCheckBox.isChecked() && orderCheckBox.isChecked()){
+                    currentUserDb.child("deliver").setValue(false);
+                    currentUserDb.child("order").setValue(true);
+                    subscription = true;
+                }
+                // check if the user has checked order
+                if (subscription){
+                    Intent subscriptionIntent = new Intent(RoleActivity.this, SubscriptionActivity.class);
+                    startActivity(subscriptionIntent);
+                }
+                //otherwise
+                else{
+                    subscription = true;
+                    Intent homeIntent = new Intent(RoleActivity.this, HomeActivity.class);
+                    homeIntent.putExtra("popup", subscription);
+                    startActivity(homeIntent);
+                }
+
+            }
+        });
 
 
 

@@ -55,8 +55,6 @@
                 android:id="@+id/deliverCheck"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:button="@drawable/custom_checkbox"
-                android:onClick="onCheckboxClicked"
                 android:text="I will deliver!"
                 android:textAlignment="center" />
 
@@ -64,8 +62,6 @@
                 android:id="@+id/orderCheck"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:button="@drawable/custom_checkbox"
-                android:onClick="onCheckboxClicked"
                 android:text="I will order!"
                 android:textAlignment="center" />
         </LinearLayout>
