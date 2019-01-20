@@ -145,7 +145,6 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_profile) {
-            // Handle the camera action
         } else if (id == R.id.nav_settings) {
 
         } else if (id == R.id.nav_logout) {
