@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateProfilePageActivity"
-    android:background="#FFF"
-    android:orientation="vertical">
+    tools:context=".ProfileActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,38 +20,45 @@
                 android:layout_height="171dp"
                 android:src="@drawable/default_user"
                 android:layout_marginTop="35dp"/>
-            <EditText
+            <TextView
                 android:id="@+id/userName"
                 android:layout_width="200dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="80dp"
-                android:background="#FFF"
-                android:hint="@string/name_hint"
                 android:textAlignment="center"
+                android:textSize="20sp"
                 android:textColorHint="@color/colorLightBlack"/>
-            <EditText
+            <TextView
                 android:id="@+id/userPhoneNumber"
                 android:layout_width="200dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="35dp"
-                android:background="#FFF"
-                android:hint="@string/phone_number_hint"
                 android:textAlignment="center"
+                android:textSize="20sp"
                 android:textColorHint="@color/colorLightBlack"/>
-            <Button
-                android:id="@+id/btnNext"
-                android:layout_marginTop="70dp"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/roleText"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/colorBlack"
-                android:hint="@string/next_hint"
-                android:textColorHint="@color/colorWhite"
-                />
+                android:layout_marginTop="35dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColorHint="@color/colorLightBlack"/>
+            <TextView
+                android:id="@+id/creditText"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:textAlignment="center"
+                android:textColorHint="@color/colorLightBlack"
+                android:textSize="20sp"
+                android:visibility="invisible"/>
         </LinearLayout>
 
     </RelativeLayout>
 
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
