@@ -69,15 +69,15 @@ public class RoleActivity extends AppCompatActivity {
                 }
                 // check if the user has checked order
                 if (subscription){
-//                    Intent subscriptionIntent = new Intent(RoleActivity.this, SubscriptionActivity.class);
-//                    startActivity(subscriptionIntent);
+                    Intent subscriptionIntent = new Intent(RoleActivity.this, SubscriptionActivity.class);
+                    startActivity(subscriptionIntent);
                 }
                 //otherwise
                 else{
-//                    subscription = true;
-//                    Intent homeIntent = new Intent(RoleActivity.this, HomeActivity.class);
-//                    homeIntent.putExtra("popup", subscription);
-//                    startActivity(homeIntent);
+                    subscription = true;
+                    Intent homeIntent = new Intent(RoleActivity.this, HomeActivity.class);
+                    homeIntent.putExtra("popup", subscription);
+                    startActivity(homeIntent);
                 }
 
             }

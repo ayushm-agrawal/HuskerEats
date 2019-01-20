@@ -34,6 +34,7 @@
     <string name="title_activity_role">RoleActivity</string>
     <string name="title_activity_subscription">SubscriptionActivity</string>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="title_activity_maps">Map</string>
