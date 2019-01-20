@@ -74,10 +74,10 @@ public class RoleActivity extends AppCompatActivity {
                 }
                 //otherwise
                 else{
-                    subscription = true;
-                    Intent homeIntent = new Intent(RoleActivity.this, HomeActivity.class);
-                    homeIntent.putExtra("popup", subscription);
-                    startActivity(homeIntent);
+//                    subscription = true;
+//                    Intent homeIntent = new Intent(RoleActivity.this, HomeActivity.class);
+//                    homeIntent.putExtra("popup", subscription);
+//                    startActivity(homeIntent);
                 }
 
             }
