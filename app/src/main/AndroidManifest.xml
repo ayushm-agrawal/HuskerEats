@@ -26,6 +26,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            android:name=".RoleActivity"
+            android:label="@string/title_activity_role"
+            android:parentActivityName=".RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.manali.huskereats.RegisterActivity" />
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity">
