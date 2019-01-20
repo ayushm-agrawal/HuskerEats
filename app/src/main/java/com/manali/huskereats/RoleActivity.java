@@ -24,8 +24,6 @@ public class RoleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_role);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         // get checkbox view
         final CheckBox deliverCheckBox = findViewById(R.id.deliverCheck);
