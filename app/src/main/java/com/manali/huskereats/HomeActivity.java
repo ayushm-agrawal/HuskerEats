@@ -3,6 +3,8 @@ package com.manali.huskereats;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,15 +15,40 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    List<Restaurants> listRestaurants;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        listRestaurants = new ArrayList<>();
+
+        listRestaurants.add(new Restaurants("Amigos", R.mipmap.amigos));
+        listRestaurants.add(new Restaurants("Arby's", R.mipmap.arbys));
+        listRestaurants.add(new Restaurants("Chick-fil-A", R.mipmap.chick_fil_a));
+        listRestaurants.add(new Restaurants("Chipotle", R.mipmap.chipotle));
+        listRestaurants.add(new Restaurants("Imperial Palace", R.mipmap.imperial_palace));
+        listRestaurants.add(new Restaurants("Panda", R.mipmap.panda_express));
+        listRestaurants.add(new Restaurants("Starbucks", R.mipmap.starbucks));
+        listRestaurants.add(new Restaurants("Subway", R.mipmap.subway_logo));
+        listRestaurants.add(new Restaurants("Valentinos", R.mipmap.valentinos));
+        listRestaurants.add(new Restaurants("Wendy's", R.mipmap.wendys));
+
+        RecyclerView rview = (RecyclerView) findViewById(R.id.listRestaurant);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter( this, listRestaurants);
+
+        rview.setLayoutManager(new LinearLayoutManager(this));
+        rview.setAdapter(adapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
