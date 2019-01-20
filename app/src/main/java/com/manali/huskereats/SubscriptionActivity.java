@@ -34,9 +34,9 @@ public class SubscriptionActivity extends AppCompatActivity {
         subscribe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeIntent = new Intent(SubscriptionActivity.this, HomeActivity.class);
-                homeIntent.putExtra("subscribed", true);
-                startActivity(homeIntent);
+//                Intent homeIntent = new Intent(SubscriptionActivity.this, HomeActivity.class);
+//                homeIntent.putExtra("subscribed", true);
+//                startActivity(homeIntent);
             }
         });
     }
