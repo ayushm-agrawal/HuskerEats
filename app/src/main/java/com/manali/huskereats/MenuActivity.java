@@ -1,5 +1,6 @@
 package com.manali.huskereats;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,7 +44,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                Toast.makeText(view.getContext(), "Hello Bois!", Toast.LENGTH_SHORT).show();
-
+                startActivity(new Intent(view.getContext(), MapsActivity.class));
             }
         });
 
