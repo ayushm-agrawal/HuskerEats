@@ -26,4 +26,5 @@
     <string name="title_activity_role">RoleActivity</string>
     <string name="title_activity_subscription">SubscriptionActivity</string>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
 </resources>
