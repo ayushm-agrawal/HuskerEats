@@ -18,6 +18,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".SubscriptionActivity"
+            android:label="@string/title_activity_subscription"
+            android:parentActivityName=".RoleActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.manali.huskereats.RoleActivity" />
+        </activity>
+        <activity
             android:name=".RoleActivity"
             android:label="@string/title_activity_role"
             android:parentActivityName=".RegisterActivity"
