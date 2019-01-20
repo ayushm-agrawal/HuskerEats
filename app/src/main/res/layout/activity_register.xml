@@ -69,7 +69,8 @@
             android:layout_height="50dp"
             android:layout_marginBottom="145dp"
             android:text="Register"
-            android:textColor="#000"/>
+            android:textColor="#FFF"
+            android:background="#000"/>
     </LinearLayout>
 
 </RelativeLayout>
