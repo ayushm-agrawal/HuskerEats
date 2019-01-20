@@ -4,6 +4,7 @@
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <meta-data
@@ -29,7 +30,7 @@
         </activity>
         <activity
             android:name=".RoleActivity"
-            android:label="@string/title_activity_role"
+            android:label="RoleActivity"
             android:parentActivityName=".RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -37,7 +38,8 @@
                 android:value="com.manali.huskereats.RegisterActivity" />
         </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,6 +47,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+        <activity android:name=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SubscriptionActivity">
-
-
 
     <include layout="@layout/content_subscription" />
 
@@ -40,7 +39,6 @@
                 android:textColor="#FFF"
                 android:textSize="20dp" />
         </RelativeLayout>
-
     </RelativeLayout>
     <RelativeLayout
         android:layout_below="@+id/first"
@@ -88,7 +86,6 @@
             android:drawableLeft="@drawable/ic_done_black_24dp"
             android:drawablePadding="10dp"
             android:textStyle="bold" />
-
     </RelativeLayout>
     <TextView
         android:layout_width="300dp"
@@ -98,9 +95,7 @@
         android:layout_marginBottom="159dp"
         android:text="$ 4.99 | per month"
         android:textAlignment="center"
-        android:textSize="25dp"
-
-        />
+        android:textSize="25dp" />
     <Button
         android:id="@+id/btnSubscribe"
         android:layout_width="300dp"
@@ -113,5 +108,4 @@
         android:text="Subscribe"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold" />
-
 </RelativeLayout>
