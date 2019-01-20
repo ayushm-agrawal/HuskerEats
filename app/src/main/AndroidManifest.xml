@@ -23,6 +23,9 @@
         android:roundIcon="@mipmap/logo_final_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".MenuActivity" />
+
         <activity android:name=".SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -50,6 +53,7 @@
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity android:name=".CreateProfilePageActivity" />
         <activity
             android:name=".SubscriptionActivity"
@@ -78,7 +82,11 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".HomeActivity"
+
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
             android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
 </manifest>

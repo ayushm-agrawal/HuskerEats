@@ -1,6 +1,7 @@
 package com.manali.huskereats;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -40,6 +41,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
                 //Put the intent to
                 Toast.makeText(v.getContext(), "Clicked", Toast.LENGTH_SHORT).show();
+                context.startActivity(new Intent(v.getContext(), MenuActivity.class));
             }
         });
     }

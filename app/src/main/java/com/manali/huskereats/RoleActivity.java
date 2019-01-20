@@ -65,6 +65,7 @@ public class RoleActivity extends AppCompatActivity {
                     currentUserDb.child("order").setValue(true);
                     subscription = true;
                 }
+
                 // check if the user has checked order
                 if (subscription){
                     Intent subscriptionIntent = new Intent(RoleActivity.this, SubscriptionActivity.class);
