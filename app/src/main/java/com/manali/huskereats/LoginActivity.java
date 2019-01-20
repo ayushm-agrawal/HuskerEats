@@ -1,5 +1,6 @@
 package com.manali.huskereats;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
@@ -27,6 +28,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mAuth = FirebaseAuth.getInstance();
 
         //declare and initialize variables
         final TextView goToSignUp = findViewById(R.id.gotoSignUp);
@@ -62,7 +65,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 //Authenticate Email and Password
-                mAuth = FirebaseAuth.getInstance();
                 mAuth.signInWithEmailAndPassword(emailText, passwordText)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override

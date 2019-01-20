@@ -17,4 +17,13 @@
     <string name="phone_number_hint">xxx-xxx-xxxx</string>
     <string name="email_hint">name@example.com</string>
     <string name="next_hint">Next</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="or">OR</string>
+    <string name="create_a_new_account">Create a new account.</string>
+    <string name="sign_up">Sign up!</string>
+    <string name="email">Email</string>
+    <string name="title_activity_role">RoleActivity</string>
+    <string name="title_activity_subscription">SubscriptionActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
 </resources>
