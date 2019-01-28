@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "686964919211",
+    "firebase_url": "https://huskereats.firebaseio.com",
+    "project_id": "huskereats",
+    "storage_bucket": "huskereats.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686964919211:android:6de2bcd9c60bd472",
+        "android_client_info": {
+          "package_name": "com.manali.huskereats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686964919211-5smknjnr6ajjmekhcgkvi790ih9eh65b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.manali.huskereats",
+            "certificate_hash": "ddcab3741d321180f73e4ae50fa9beaa82dbeb33"
+          }
+        },
+        {
+          "client_id": "686964919211-u242da2bt731qkjhibksdbsqg1r5psr6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.manali.huskereats",
+            "certificate_hash": "06677a97b78d03f3d3011ec293b4d783d5f17e1c"
+          }
+        },
+        {
+          "client_id": "686964919211-ovgr09f0t1ttm2l029cat4apu9khcsn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmOU_YgeQ78osMwwzVmezMoDEdPlb9Dlk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686964919211-ovgr09f0t1ttm2l029cat4apu9khcsn2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
